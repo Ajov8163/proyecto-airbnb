@@ -12,8 +12,6 @@ import Mansionx from "./pages/paginasico/Mansion-x";
 import Piscina1 from "./pages/paginasico/piscina1";
 import Piscina2 from "./pages/paginasico/piscina2";
 import Pago from "./pages/pago";
-import Popuppago from "./components/popup-pago";
-
 
 
 
