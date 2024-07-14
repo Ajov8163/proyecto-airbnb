@@ -33,9 +33,7 @@ function App() {
           <Route path="/mansionx" element={<Mansionx />} />
           <Route path="/piscina1" element={<Piscina1 />} />
           <Route path="/piscina2" element={<Piscina2 />} />
-          <Route path="/" element={<Home />} />
           <Route path="/pago" element={<Pago/>} />
-          <Route path="/" element={<Home/>} />
         </Routes>
       </BrowserRouter>
     </>

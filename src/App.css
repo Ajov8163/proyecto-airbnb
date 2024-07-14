@@ -4,3 +4,21 @@
 .cont:hover .texx {
     opacity: 100;
 }
+
+/* lo de arriba es por defecto */
+
+
+@media (max-width: 640px) {
+    .movile{
+        display: block;
+    }
+   
+    .cont{
+        display: none;
+    }
+    
+    
+   
+
+    
+}

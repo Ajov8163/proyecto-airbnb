@@ -18,9 +18,9 @@ export const Login = ({cerrar}) => {
   
   
   return (
-    <div onClick={cerrar} className=" bg-[#000000b4] flex justify-center  w-full h-full   top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2  fixed ">
-      <div className="  w-full max-w-md max-h-full items-center flex">
-        <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+    <div className=" bg-[#2c2c2c73] backdrop-blur-sm flex justify-center  w-full h-full   top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2  fixed ">
+      <div className="  w-full max-w-md max-h-full items-center flex ">
+        <div className="relative bg-white rounded-lg shadow dark:bg-gray-700 ">
           <div className="flex justify-start gap-16 items-center p-5">
             <button onClick={cerrar}
               type="button"
@@ -45,7 +45,7 @@ export const Login = ({cerrar}) => {
             <h5 className="font-semibold">Iniciar sesión</h5>
           </div>
 
-          <div className="p-4 md:p-5">
+          <div className="p-4 ">
             <h5 className="text-xl font-semibold text-gray-900 dark:text-white mb-5">
               Te damos la bienvenida a Airbnb
             </h5>

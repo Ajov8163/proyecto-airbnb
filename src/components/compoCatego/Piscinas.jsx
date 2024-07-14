@@ -4,38 +4,49 @@ import { Navbar } from "../Navbar";
 import Barrabusqueda from "../Barrabusqueda";
 import Barracate from "../Barracate";
 import { Link } from "react-router-dom";
-import Piscina2 from "../../pages/paginasico/piscina2";
- 
+import BarraMovil from "../BarraMovil";
+import Barrafutermobil from "../Barrafutermobil";
+import Mostrarpreciomobil from "../Mostrarpreciomobil";
+
 const Piscinas = () => {
   return (
     <div>
-      <Navbar />
-      <Barrabusqueda />
-      <hr />
-      <Barracate />
-      <div className="flex justify-around flex-wrap mx-4">
-      <Link to={"/piscina1"}>
-      <Card
-          imagen={
-            "https://a0.muscache.com/im/pictures/prohost-api/Hosting-51209430/original/c2482da0-beee-4144-9fe9-931f6d8d4d04.jpeg?im_w=720"
-          }
-          titulo={"Villa entero en Anapoima, Colombia"}
-          anfi={" Latin Exclusive"}
-          precio={"$2,884,301 COP"}
-          noche={"noche"}
-        />
-      </Link>
-      <Link to={"/piscina2"}>
-      <Card
-          imagen={
-            "https://a0.muscache.com/im/pictures/miso/Hosting-974691316632214270/original/afd0b15d-5172-47ba-b22c-5e1ec695c869.jpeg?im_w=720"
-          }
-          titulo={"Villa entero en Anapoima, Colombia"}
-          anfi={"  La Calera, Colombia"}
-          precio={"$1,450,000 COP"}
-          noche={"noche"}
-        />
-      </Link>
+      <div className="hidden sm:block">
+        <Navbar />
+        <Barrabusqueda />
+        <hr />
+        <Barracate />
+      </div>
+      <div className="sm:hidden sticky top-0  z-40">
+        <BarraMovil />
+      </div>
+
+      <div className="flex justify-around flex-wrap px-4  sm:mt-0">
+        <div className="sm:hidden ">
+          <Mostrarpreciomobil />
+        </div>
+        <Link to={"/piscina1"}>
+          <Card
+            imagen={
+              "https://a0.muscache.com/im/pictures/prohost-api/Hosting-51209430/original/c2482da0-beee-4144-9fe9-931f6d8d4d04.jpeg?im_w=720"
+            }
+            titulo={"Villa entero en Anapoima, Colombia"}
+            anfi={" Latin Exclusive"}
+            precio={"$2,884,301 COP"}
+            noche={"noche"}
+          />
+        </Link>
+        <Link to={"/piscina2"}>
+          <Card
+            imagen={
+              "https://a0.muscache.com/im/pictures/miso/Hosting-974691316632214270/original/afd0b15d-5172-47ba-b22c-5e1ec695c869.jpeg?im_w=720"
+            }
+            titulo={"Villa entero en Anapoima, Colombia"}
+            anfi={"  La Calera, Colombia"}
+            precio={"$1,450,000 COP"}
+            noche={"noche"}
+          />
+        </Link>
         <Card
           imagen={
             "https://a0.muscache.com/im/pictures/1fe3c772-fdbd-4fc5-bd2a-92927ab2daac.jpg?im_w=720"
@@ -95,9 +106,12 @@ const Piscinas = () => {
         <p className="xl:text-3xl sm:xl:text-3xl">
           Sigue explorando la categoría Piscinas increíbles
         </p>
-        <button className="bg-zinc-900 text-white text-2xl px-7 py-3 rounded-lg mt-4 hover:bg-black cursor-pointer font-semibold mb-10">
+        <button className="bg-zinc-900 text-white  px-7 py-3 rounded-lg hover:bg-black cursor-pointer font-semibold sm:mb-0 mt-10  mb-20">
           Mostrar más
         </button>
+      </div>
+      <div className="w-full sm:hidden sticky -bottom-0">
+        <Barrafutermobil />
       </div>
     </div>
   );

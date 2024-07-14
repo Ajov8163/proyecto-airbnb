@@ -3,15 +3,25 @@ import { Navbar } from "../Navbar";
 import Barrabusqueda from "../Barrabusqueda";
 import Barracate from "../Barracate";
 import Card from "../compoCard/card";
+import BarraMovil from "../BarraMovil";
+import Mostrarpreciomobil from "../Mostrarpreciomobil";
 
 function Minicasas() {
   return (
     <div>
-      <Navbar />
-      <Barrabusqueda />
-      <hr />
-      <Barracate />
+      <div className="hidden sm:block">
+        <Navbar />
+        <Barrabusqueda />
+        <hr />
+        <Barracate />
+      </div>
+      <div className="sm:hidden sticky top-0  z-40">
+        <BarraMovil />
+      </div>
       <div className="flex justify-around flex-wrap mx-4">
+      <div className="sm:hidden ">
+          <Mostrarpreciomobil />
+        </div>
         <Card
           imagen={
             "https://a0.muscache.com/im/pictures/miso/Hosting-823325081590184412/original/76fb4fb5-e58b-46b2-9705-dfe91ce5f0b0.jpeg?im_w=320"

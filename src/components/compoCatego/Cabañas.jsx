@@ -3,15 +3,25 @@ import { Navbar } from "../Navbar";
 import Barrabusqueda from "../Barrabusqueda";
 import Barracate from "../Barracate";
 import Card from "../compoCard/card";
+import BarraMovil from "../BarraMovil";
+import Mostrarpreciomobil from "../Mostrarpreciomobil";
 
 function Cabañas() {
   return (
     <div>
-      <Navbar />
-      <Barrabusqueda />
-      <hr />
-      <Barracate />
+       <div className="hidden sm:block">
+        <Navbar />
+        <Barrabusqueda />
+        <hr />
+        <Barracate />
+      </div>
+      <div className="sm:hidden sticky top-0  z-40">
+        <BarraMovil />
+      </div>
       <div className="flex justify-around flex-wrap mx-4">
+      <div className="sm:hidden ">
+          <Mostrarpreciomobil />
+        </div>
         <Card
           imagen={
             "https://a0.muscache.com/im/pictures/2aae9259-4a19-47c8-a7ba-6f146e226db6.jpg?im_w=720"

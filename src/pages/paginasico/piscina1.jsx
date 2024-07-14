@@ -3,51 +3,62 @@ import { NavbarPaginas } from "../../components/compoCatego/Navbarpaginas";
 import "react-datepicker/dist/react-datepicker.css";
 import Reserva from "../../components/reserva";
 import Map from "../../components/maps/mapa";
-
+import Barraalojamiento from "../../components/Barraalojamiento";
 
 const Piscina1 = () => {
   return (
     <div>
-      <NavbarPaginas />
+      <div className="hidden sm:block">
+        <NavbarPaginas />
+      </div>
       <hr />
-      <div className="flex  flex-col mt-6 items-center ">
-        <div className="flex   items-center w-[1030px] justify-between mb-8">
-          <div>
-            <h1 className="font-bold text-3xl">
-              Villa entero en Anapoima, Colombia
-            </h1>
-          </div>
-          <div className="flex font-bold gap-5 underline">
-            <div className="flex items-center gap-2">
-              <img
-                className="w-4 h-4"
-                src={"https://cdn-icons-png.flaticon.com/128/8113/8113021.png"}
-              />
-              <p>Compatir</p>
+      <div className="flex  flex-col mt-6 items-center">
+        <div className="hidden sm:block">
+          <div className="flex items-center w-[1075px] justify-between ">
+            <div className="pb-4">
+              <h1 className="font-bold text-3xl">
+                Villa entero en Anapoima, Colombia
+              </h1>
             </div>
-            <div className="flex items-center gap-2 ">
-              <img
-                className="w-4 h-4"
-                src={"https://cdn-icons-png.flaticon.com/128/2027/2027396.png"}
-              />
-              <p>Guardar</p>
+            <div className="flex font-bold gap-5 underline ">
+              <div className="flex items-center gap-2">
+                <img
+                  className="w-4 h-4"
+                  src={
+                    "https://cdn-icons-png.flaticon.com/128/8113/8113021.png"
+                  }
+                />
+                <p>Compatir</p>
+              </div>
+              <div className="flex items-center gap-2 ">
+                <img
+                  className="w-4 h-4"
+                  src={
+                    "https://cdn-icons-png.flaticon.com/128/2027/2027396.png"
+                  }
+                />
+                <p>Guardar</p>
+              </div>
             </div>
           </div>
         </div>
+       <div className="sm:hidden w-full">
+       <Barraalojamiento />
+       </div>
 
         <img
-          className="w-[68%] rounded-xl"
+          className="sm:w-[68%] sm:rounded-xl"
           src={
             "https://a0.muscache.com/im/pictures/prohost-api/Hosting-51209430/original/c2482da0-beee-4144-9fe9-931f6d8d4d04.jpeg?im_w=720"
           }
         />
-        <div className="flex w-2/3 mb-20">
-          <div className="w-[55%]">
-            <div className="py-5 border-b">
-              <h1 className="font-semibold text-2xl">
+        <div className="sm:flex sm:w-2/3 sm:mb-20 mb-8 w-full px-6 sm:px-0 ">
+          <div className="sm:w-[55%] ">
+            <div className="py-5 border-b ">
+              <h1 className="font-semibold sm:text-2xl text-xl">
                 Alojamiento entero en Anapoima, Colombia
               </h1>
-              <p className="opacity-70 text-xl">
+              <p className="opacity-70  sm:text-xl">
                 8 huéspedes 4 habitaciones4 camas4,5 baños
               </p>
             </div>
@@ -108,11 +119,11 @@ const Piscina1 = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="w-[490px]">
+                <div className=" sm:w-[490px] ">
                   <h1 className="font-semibold">
                     ¡Haz una búsqueda del tesoro emocional!
                   </h1>
-                  <p className="opacity-70 whitespace-nowrap overflow-hidden text-ellipsis">
+                  <p className="opacity-70 sm:whitespace-nowrap overflow-hidden text-ellipsis">
                     Las pistas te esperan dentro de maletas reales, cada una con
                     su propia carga emocional
                   </p>
@@ -173,7 +184,7 @@ const Piscina1 = () => {
                   <h1 className="font-semibold">
                     ¡Crea tu propia esfera de pensamiento!
                   </h1>
-                  <p className="opacity-70opacity-70 whitespace-nowrap overflow-hidden text-ellipsis">
+                  <p className="opacity-70opacity-70 sm:whitespace-nowrap overflow-hidden text-ellipsis">
                     Diseña una esfera para guardar tu pensamiento central y
                     llévatela a casa.
                   </p>
@@ -181,11 +192,13 @@ const Piscina1 = () => {
               </div>
             </div>
           </div>
-          <div className="w-[45%] flex justify-end ">
+          <div className="sm:w-[45%] flex sm:justify-end ">
             <Reserva />
           </div>
         </div>
-        <Map />
+       <div className=" w-full sm:w-[1000px] sm:px-0 px-6 ">
+       <Map />
+       </div>
       </div>
     </div>
   );

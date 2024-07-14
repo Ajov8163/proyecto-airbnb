@@ -4,59 +4,69 @@ import { Navbar } from "../components/Navbar";
 import img2 from "../assets/img/futer.png";
 import { Link } from "react-router-dom";
 import Barracate from "../components/Barracate";
-
+import BarraMovil from "../components/BarraMovil";
+import Barrafutermobil from "../components/Barrafutermobil";
 
 export const Home = () => {
-
   return (
     <div>
-      <Navbar/>
-      <Barrabusqueda />
-      <hr />
-        <Barracate/>
-        
-      <div cartas className="flex justify-around flex-wrap mx-4">
-      <Link to={"/crea"}>
-      <Card
-          imagen={
-            "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/ced15ffe-0ab5-48cf-a189-dbdeaaf04387.jpeg?im_w=1440&im_q=highq"
-          }
-          titulo={"Crea pensamientos centrales con Intensa-Mente 2"}
-          anfi={"Joy"}
-          precio={"$0 COP"}
-          noche={"por huésped"}
-        />
-      </Link>
-       <Link to={"/quedate"}>
-       <Card
-          imagen={
-            "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4OTQ5ODA0MDcwMTE4Mw%3D%3D/original/4f7a276e-9995-4b32-bda6-300de0619b25.png?im_w=1440&im_q=highq"
-          }
-          titulo={"Quédate en la casa de Purple Rain de Prince"}
-          anfi={"Wendy And Lisa"}
-          precio={"Abre En Agosto"}
-        />
-       </Link>
-       <Link to={"/noche"}>
-       <Card
-          imagen={
-            "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4NzY0ODgzNzUzNjQzNw%3D%3D/original/cda19e4c-ae11-47b1-831b-a29f94ab76dc.png?im_w=1440&im_q=highq"
-          }
-          titulo={"Noche VIP con Kevin Hart"}
-          anfi={"Kevin Hart"}
-          precio={"Abre En Agosto"}
-        />
-       </Link>
-       <Link to={"/mansionx"}>
-       <Card
-          imagen={
-            "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTg2NzMzNDc0MDk1Nzg4NA%3D%3D/original/b676fc8d-8250-4df0-a7cb-728b0486e371.jpeg?im_w=1440&im_q=highq"
-          }
-          titulo={"Quédate en la Mansión X"}
-          anfi={"Jubilee"}
-          precio={"Agotada"}
-        />
-       </Link>
+      <div className="sm:hidden sticky z-40 w-full -top-0">
+        <BarraMovil />
+      </div>
+      <div className="hidden sm:block ">
+        <Navbar />
+      </div>
+      <div className="hidden sm:block">
+        <Barrabusqueda />
+      </div>
+      <div className="hidden sm:block">
+        <hr />
+      </div>
+      <div className="hidden sm:block w-full ">
+        <Barracate />
+      </div>
+      <div cartas className="flex justify-around flex-wrap mx-4 mt-0 sm:mt-0">
+        <Link to={"/crea"}>
+          <Card
+            imagen={
+              "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/ced15ffe-0ab5-48cf-a189-dbdeaaf04387.jpeg?im_w=1440&im_q=highq"
+            }
+            titulo={"Crea pensamientos centrales con Intensa-Mente 2"}
+            anfi={"Joy"}
+            precio={"$0 COP"}
+            noche={"por huésped"}
+          />
+        </Link>
+        <Link to={"/quedate"}>
+          <Card
+            imagen={
+              "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4OTQ5ODA0MDcwMTE4Mw%3D%3D/original/4f7a276e-9995-4b32-bda6-300de0619b25.png?im_w=1440&im_q=highq"
+            }
+            titulo={"Quédate en la casa de Purple Rain de Prince"}
+            anfi={"Wendy And Lisa"}
+            precio={"Abre En Agosto"}
+          />
+        </Link>
+        <Link to={"/noche"}>
+          <Card
+            imagen={
+              "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4NzY0ODgzNzUzNjQzNw%3D%3D/original/cda19e4c-ae11-47b1-831b-a29f94ab76dc.png?im_w=1440&im_q=highq"
+            }
+            titulo={"Noche VIP con Kevin Hart"}
+            anfi={"Kevin Hart"}
+            precio={"Abre En Agosto"}
+          />
+        </Link>
+        <Link to={"/mansionx"}>
+          <Card
+            imagen={
+              "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTg2NzMzNDc0MDk1Nzg4NA%3D%3D/original/b676fc8d-8250-4df0-a7cb-728b0486e371.jpeg?im_w=1440&im_q=highq"
+            }
+            titulo={"Quédate en la Mansión X"}
+            anfi={"Jubilee"}
+            precio={"Agotada"}
+          />
+        </Link>
         <Card
           imagen={
             "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA3NzgxMzcwNzcxOTUzNQ%3D%3D/original/872f434b-9348-4ff1-8c6f-754fdbab4010.jpeg?im_w=1440&im_q=highq"
@@ -145,17 +155,28 @@ export const Home = () => {
           anfi={" michell"}
           precio={"Agotada"}
         />
+        <Card
+          imagen={
+            "https://a0.muscache.com/im/pictures/miso/Hosting-694055224756906854/original/76f85a0c-b3e2-4f1d-9aa9-d7838f2393c6.jpeg?im_w=1200&im_q=highq"
+          }
+          titulo={"VISTAS A LAS CÍCLADAS"}
+          anfi={" michell"}
+          precio={"Agotada"}
+        />
       </div>
 
-      <div className="flex items-center mt-16 flex-col">
-        <p className="xl:text-3xl sm:xl:text-3xl">
+      <div botonmos className="flex items-center justify-center mt-16  flex-col ">
+        <p className="xl:text-3xl sm:xl:text-3xl ">
           Sigue explorando la categoría casas cicládas
         </p>
-        <button className="bg-zinc-900 text-white text-2xl px-7 py-3 rounded-lg hover:bg-black cursor-pointer font-semibold mt-10">
+        <button className="bg-zinc-900 text-white px-7 py-3 rounded-lg hover:bg-black cursor-pointer font-semibold  sm:mb-0 mt-10  mb-20">
           Mostrar más
         </button>
       </div>
-      <div className="mt-10 xl:block hidden">
+          <div className="w-full sm:hidden fixed bottom-0">
+          <Barrafutermobil />
+          </div>
+      <div className="mt-10 sm:block hidden">
         <img className="w-full" src={img2} alt="" />
       </div>
     </div>

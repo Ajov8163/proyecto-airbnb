@@ -10,7 +10,7 @@ const Piscina2 = () => {
 
       <hr />
       <div className="flex  flex-col mt-6 items-center ">
-        <div className="flex   items-center w-[1030px] justify-between mb-8">
+        <div className="flex   items-center w-[1075px] justify-between mb-8">
           <div>
             <h1 className="font-bold text-3xl">
               Villa entero en Anapoima, Colombia

@@ -5,12 +5,12 @@ export const Registro = ({ cerrar }) => {
 
 
   return (
-    <div onClick={cerrar} className=" bg-[#2c2c2c73] flex justify-center  w-full h-full  top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2 z-40 fixed ">
+    <div  className=" bg-[#2c2c2c73] backdrop-blur-sm flex justify-center  w-full h-full  top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2 z-40 fixed ">
       <div className="  w-full max-w-md max-h-full items-center flex">
         <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
           <div className="flex justify-start gap-20 items-center p-5">
             <button
-              
+              onClick={cerrar}
               type="button"
               className=" text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white mr-16"
             >

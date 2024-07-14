@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const Popuppago = () => {
   return (
-    <div className=" flex  justify-center items-center w-full h-full  top-1/2 left-1/2 backdrop-blur-sm transform -translate-x-1/2 -translate-y-1/2 z-40 fixed ">
-      <div className="border rounded-xl w-4/12 h-72 bg-white shadow-xl ">
-        <div className="flex justify-center items-center p-7 flex-col text-center">
+    <div className=" flex bg-[#2c2c2c73]  justify-center items-center w-full h-full   backdrop-blur-sm   z-40 fixed ">
+      <div className="border rounded-xl sm:w-4/12 sm:h-72 bg-white shadow-xl m-5">
+        <div className="flex justify-center items-center sm:p-7 p-5 flex-col text-center ">
           <div className="bg-green-200 rounded-full w-12 h-12 flex justify-center items-center mb-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@ const Popuppago = () => {
           </div>
           <div className="flex justify-center py-4">
             <Link to={"/"}>
-              <button className="bg-rose-500 rounded-lg py-2 px-28 font-semibold text-white">
+              <button className="bg-rose-500 rounded-lg py-2 sm:px-28 px-20 font-semibold text-white truncate">
                 Volver al inicio
               </button>
             </Link>
